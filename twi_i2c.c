@@ -3,9 +3,9 @@
 
 
 /**
- * @description i2c sda¹Ü½ÅÄ£Ê½
+ * @description i2c sdaï¿½Ü½ï¿½Ä£Ê½
  * @param mode Ä£Ê½
- * @return ÎÞ
+ * @return ï¿½ï¿½
  */
 static void twi_i2c_set_sda_pin(uint8_t mode)
 {
@@ -27,9 +27,13 @@ static void twi_i2c_set_sda_pin(uint8_t mode)
 	HAL_GPIO_Init(TWI_I2C_SDA_PORT, &GPIO_InitStruct);
 }
 
+
+
+
+
 /**
- * @description i2cÆôÓÃ
- * @return ÎÞ
+ * @description i2cï¿½ï¿½ï¿½ï¿½
+ * @return ï¿½ï¿½
  */
 void twi_i2c_start(void)
 {   
@@ -42,8 +46,8 @@ void twi_i2c_start(void)
 }
 
 /**
- * @description i2c½ûÓÃ
- * @return ÎÞ
+ * @description i2cï¿½ï¿½ï¿½ï¿½
+ * @return ï¿½ï¿½
  */
 void twi_i2c_stop(void)
 {
@@ -54,8 +58,8 @@ void twi_i2c_stop(void)
 }
 
 /**
- * @description i2cÓ¦´ð
- * @return ÎÞ
+ * @description i2cÓ¦ï¿½ï¿½
+ * @return ï¿½ï¿½
  */
 static void twi_i2c_ack(void)
 { 
@@ -69,8 +73,8 @@ static void twi_i2c_ack(void)
 }
 
 /**
- * @description i2c²»Ó¦´ð
- * @return ÎÞ
+ * @description i2cï¿½ï¿½Ó¦ï¿½ï¿½
+ * @return ï¿½ï¿½
  */
 static void twi_i2c_nack(void)
 { 
@@ -84,8 +88,8 @@ static void twi_i2c_nack(void)
 }
 
 /**
- * @description i2cµÈ´ýÓ¦´ð
- * @return ³É¹¦»òÊ§°Ü
+ * @description i2cï¿½È´ï¿½Ó¦ï¿½ï¿½
+ * @return ï¿½É¹ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
  */
 static int32_t twi_i2c_wait_ack(void)
 {
@@ -114,9 +118,9 @@ static int32_t twi_i2c_wait_ack(void)
 } 
 
 /**
- * @description i2cÐ´×Ö½Ú
- * @param data Êý¾Ý
- * @return ³É¹¦»òÊ§°Ü
+ * @description i2cÐ´ï¿½Ö½ï¿½
+ * @param data ï¿½ï¿½ï¿½ï¿½
+ * @return ï¿½É¹ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
  */
 int32_t twi_i2c_write_byte(uint8_t data)
 {
@@ -143,9 +147,9 @@ int32_t twi_i2c_write_byte(uint8_t data)
 }
 
 /**
- * @description i2c¶Á×Ö½Ú
- * @param ack Ó¦´ð
- * @return ³É¹¦»òÊ§°Ü
+ * @description i2cï¿½ï¿½ï¿½Ö½ï¿½
+ * @param ack Ó¦ï¿½ï¿½
+ * @return ï¿½É¹ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
  */
 uint8_t twi_i2c_read_byte(uint8_t ack) 
 {
@@ -174,12 +178,12 @@ uint8_t twi_i2c_read_byte(uint8_t ack)
 }
 
 /**
- * @description i2c¶Á¼Ä´æÆ÷
- * @param addr µØÖ·
- * @param reg ¼Ä´æÆ÷
- * @param buff Êý¾Ý
- * @param len ³¤¶È
- * @return ³É¹¦»òÊ§°Ü
+ * @description i2cï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
+ * @param addr ï¿½ï¿½Ö·
+ * @param reg ï¿½Ä´ï¿½ï¿½ï¿½
+ * @param buff ï¿½ï¿½ï¿½ï¿½
+ * @param len ï¿½ï¿½ï¿½ï¿½
+ * @return ï¿½É¹ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
  */
 int32_t twi_i2c_read_reg(uint8_t addr, uint8_t reg, uint8_t *buff, uint16_t len) 				 
 {
@@ -209,12 +213,12 @@ int32_t twi_i2c_read_reg(uint8_t addr, uint8_t reg, uint8_t *buff, uint16_t len)
 }
 
 /**
- * @description i2c¶Á¼Ä´æÆ÷
- * @param addr µØÖ·
- * @param reg ¼Ä´æÆ÷
- * @param buff Êý¾Ý
- * @param len ³¤¶È
- * @return ³É¹¦»òÊ§°Ü
+ * @description i2cï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
+ * @param addr ï¿½ï¿½Ö·
+ * @param reg ï¿½Ä´ï¿½ï¿½ï¿½
+ * @param buff ï¿½ï¿½ï¿½ï¿½
+ * @param len ï¿½ï¿½ï¿½ï¿½
+ * @return ï¿½É¹ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
  */
 int32_t twi_i2c_write_reg(uint8_t addr, uint8_t reg, uint8_t *buff, uint16_t len) 				 
 { 
